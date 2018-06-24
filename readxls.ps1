@@ -25,4 +25,4 @@ Function GET-SpreadSheet() {$objExcel=New-Object -ComObject Excel.Application;  
                 $cellvalue=$sheet.Cells.Item($row,$col).text;$data=$data+" " +$cellvalue             # Get Cell Value
                 $rndmstrng=GET-rndmstrng –length $cellvalue.length –sourcedata $ascii;               # Generate Random Value
                 $sheet.Cells.Item($row,$col)=$rndmstrng}}}                                           # Update Cell Value
-    $workbook.save();$objExcel.quit();}                                                               # Exit
+    $workbook.save();$objExcel.quit();}                                                              # Exit
